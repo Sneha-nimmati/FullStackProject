@@ -1,1 +1,25 @@
-
+.nav-bar {
+    background-color: black;
+}
+.navbar-brand{
+    color: blue !important;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: italic;
+    font-family: "Times New Roman";
+}
+.dropdown{
+    left: 1245px !important;
+}
+svg {
+    color: white;
+    height: 20px;
+    width: 20px;
+}
+.nav-link {
+    color: aliceblue !important;
+    display: inline-block !important;
+}
+.logout {
+    display: inline-block !important;
+}
