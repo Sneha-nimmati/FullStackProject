@@ -1,0 +1,72 @@
+
+.container {
+    height:100%
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-image: url(./banner2.jpeg);
+    background-size: 1600px 800px;
+    background-repeat: no-repeat;
+    backdrop-filter: brightness(0.6);
+}
+
+.university-search {
+    padding-top: 350px;
+}
+.search-dropdowns {
+    display: inline-block;
+    border-color: black 2px;
+    padding-left: 300px;
+}
+.select-form {
+    max-width: 155px;
+    display: inline-block;
+}
+.state-select {
+    border-color: darkgray;
+    width: 155px;
+    height: 36px;
+    border-radius: 5px;
+}
+.form-select {
+    display: inline-block;
+}
+.university-dropdown {
+    display: inline-block;
+    margin-left: 90px;
+}
+.university-select {
+    width: 300px;
+    border-color: darkgray;
+    height: 36px;
+    border-radius: 5px;
+}
+.search-button {
+    display: inline-block;
+    margin-left: 90px;
+    width: 100px;
+    height: 45px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4 ;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+}
+.btn {
+    border: 1px solid transparent;
+}

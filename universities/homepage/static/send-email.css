@@ -1,0 +1,19 @@
+html,body {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+body {
+    background-image: url(./send_email.png);
+    background-size: 1540px 290px;
+    background-repeat: no-repeat;
+    backdrop-filter: brightness(0.6);
+}
+.send-email {
+    text-align: center;
+    padding-top: 350px;
+}
+.send-btn {
+    margin-top: 25px;
+    margin-left: 700px;
+}
