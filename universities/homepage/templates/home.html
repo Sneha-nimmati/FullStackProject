@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        {% extends 'login.html' %}
+        {% load static %}
+            <link href="{% static 'home.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+</head>
+<body>
+{% block content %}
+<div class="university-search">
+    <div class="search-dropdowns">
+        <form method = "post" class="select-form" action="{% url 'universities' %}">
+            {% csrf_token %}
+            <select class='state-select' id="stateName" onChange = "form.submit()" name = 'state-select'>
+                <option disabled="True" selected value="">state</option>
+                    {% for id, state in states.items %}
+                        {% if state %}
+                        <option name = {{state}} value = {{id}}>{{state}}</option>
+                         {% endif %}
+                    {% endfor %}
+            </select>
+        </form>
+        <div class="university-dropdown">
+            <select class='university-select' id = "UniversityName" onchange="getSelectedValue()">
+                <option disabled="True" selected value="">Select Any University</option>
+              {% for university in list %}
+                {% if university.UniversityId %}
+                    <option value={{university.UniversityId}}>{{university.UniversityName}}</option>
+                {% endif %}
+              {% endfor %}
+            </select>
+
+        </div>
+    </div>
+        <button onclick= "getUniversityId()" class="btn btn-primary search-button">Search</button>
+    </a>
+</div>
+
+<script>
+    function getSelectedValue(){
+        var result = document.getElementById("UniversityName").value;
+        console.log(result);
+    }
+    function getUniversityId(){
+        var e = document.getElementById("UniversityName");
+        const text = e.options[e.selectedIndex].value;
+        window.location.href = 'universities/'+ text
+    }
+</script>
+{% endblock content %}
+</body>
+</html>
